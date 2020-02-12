@@ -14,14 +14,11 @@ const setUpInput = function(conn) {
     }
     if (key === 'w') {
       connection.write('Move: up');
-    }
-    if (key === 'a') {
+    } else if (key === 'a') {
       connection.write('Move: left');
-    }
-    if (key === 's') {
+    } else if (key === 's') {
       connection.write('Move: down');
-    }
-    if (key === 'd') {
+    } else if (key === 'd') {
       connection.write('Move: right');
     }
   })

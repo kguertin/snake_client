@@ -12,6 +12,8 @@ const setUpInput = function(conn) {
     if (key === '\u0003') {
       process.exit();
     }
+
+    //Movement
     if (key === 'w') {
       connection.write('Move: up');
     } else if (key === 'a') {
@@ -20,6 +22,12 @@ const setUpInput = function(conn) {
       connection.write('Move: down');
     } else if (key === 'd') {
       connection.write('Move: right');
+    }
+
+    if (key === 'q'){
+      connection.write('Say: Heads Up!');
+    } else if (key === 'e'){
+      connection.write('Say: Snek!')
     }
   })
 
